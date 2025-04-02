@@ -2,8 +2,24 @@ h1 {
     font: bold;
     font-family: 'Segoe UI';
     font-display: auto;
+    text-align: center;
 }
 
 body {
-    text-align: center;
+    margin: auto;
+    zoom: auto;
+}
+
+#wrapper {
+    background-color: blanchedalmond
+}
+
+socialmedias {
+    text-align: right;
+    margin: auto;
+    display: block;
+}
+
+.msep {
+    white-space: pre-wrap;
 }
