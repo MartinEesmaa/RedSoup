@@ -14,7 +14,12 @@ body {
 }
 
 #wrapper {
-    background-color: blanchedalmond
+    background-color: blanchedalmond;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    padding-right: 10%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 socialmedias {
