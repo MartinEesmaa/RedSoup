@@ -56,6 +56,10 @@ socialmedias {
     white-space: pre-wrap;
 }
 
+.msep :left {
+    text-align: right;
+}
+
 header {
     position: relative;
 }
@@ -74,4 +78,18 @@ header nav a {
 
 header nav a:hover {
     color:crimson;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.text {
+    flex: 1;
+}
+
+.image {
+    flex-shrink: 0;
 }
