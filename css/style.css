@@ -91,5 +91,11 @@ header nav a:hover {
 }
 
 .image {
-    flex-shrink: 0;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 14px;
 }
