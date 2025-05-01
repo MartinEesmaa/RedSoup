@@ -52,14 +52,6 @@ socialmedias {
     display: block;
 }
 
-.msep {
-    white-space: pre-wrap;
-}
-
-.msep :left {
-    text-align: right;
-}
-
 header {
     position: relative;
 }
