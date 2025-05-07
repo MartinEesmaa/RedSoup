@@ -46,6 +46,17 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" rows="5" style="resize:none" placeholder="Type your message here..." required></textarea>
 
+            <label for="topic">How did you hear that?</label>
+            <select id="topic" name="topic" required>
+                <option value="">-- Select --</option>
+                <option value="gdsearch">DuckDuckGo/Google/Bing/SearX</option>
+                <option value="reflink">Referred link</option>
+                <option value="smedia">Social Media</option>
+                <option value="test">Testing</option>
+                <option value="surf">Surfing</option>
+                <option value="somethinge">Something else</option>
+            </select>
+
             <div class="button-group">
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
