@@ -91,3 +91,34 @@ header nav a:hover {
     margin-top: 10px;
     font-size: 14px;
 }
+
+/* Inline CSS for form styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+form input, form select, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form button {
+    width: 48%;
+    cursor: pointer;
+}
+form .button-group {
+    display: flex;
+    justify-content: space-between;
+}
