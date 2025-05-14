@@ -51,32 +51,56 @@
             <textarea id="description" name="description" rows="5" style="resize:none" placeholder="Type your message here..." required></textarea>
 
             <label for="source">How did you hear that?</label>
-            <div id="source">
-                <div>
-                    <input type="radio" id="gdsearch" name="source" value="DuckDuckGo/Google/Bing/SearX" required>
-                    <label for="gdsearch">DuckDuckGo/Google/Bing/SearX</label>
-                </div>
-                <div>
-                    <input type="radio" id="reflink" name="source" value="Referred link" required>
-                    <label for="reflink">Referred link</label>
-                </div>
-                <div>
-                    <input type="radio" id="smedia" name="source" value="Social Media" required>
-                    <label for="smedia">Social Media</label>
-                </div>
-                <div>
-                    <input type="radio" id="test" name="source" value="Testing" required>
-                    <label for="test">Testing</label>
-                </div>
-                <div>
-                    <input type="radio" id="surf" name="source" value="Surfing" required>
-                    <label for="surf">Surfing</label>
-                </div>
-                <div>
-                    <input type="radio" id="somethinge" name="source" value="Something else" required>
-                    <label for="somethinge">Something else</label>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" id="gdsearch" name="source" value="DuckDuckGo/Google/Bing/SearX" required>
+                    </td>
+                    <td>
+                        <label for="gdsearch">DuckDuckGo/Google/Bing/SearX</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="reflink" name="source" value="Referred link" required>
+                    </td>
+                    <td>
+                        <label for="reflink">Referred link</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="smedia" name="source" value="Social Media" required>
+                    </td>
+                    <td>
+                        <label for="smedia">Social Media</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="test" name="source" value="Testing" required>
+                    </td>
+                    <td>
+                        <label for="test">Testing</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="surf" name="source" value="Surfing" required>
+                    </td>
+                    <td>
+                        <label for="surf">Surfing</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="somethinge" name="source" value="Something else" required>
+                    </td>
+                    <td>
+                        <label for="somethinge">Something else</label>
+                    </td>
+                </tr>
+            </table>
 
             <div class="button-group">
                 <button type="submit">Submit</button>
