@@ -28,7 +28,7 @@
             Or if you want to contact via email, please send an email to <a href="mailto:martin.eesmaa@protonmail.com">me</a>.
         </p>
         <!-- Contact Form -->
-        <form method="POST" action="#">
+        <form method="GET" action="mailto:martin.eesmaa@protonmail.com" onsubmit="return prepareMailto()">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Full name" required>
 
@@ -47,8 +47,8 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" rows="5" style="resize:none" placeholder="Type your message here..." required></textarea>
 
-            <label for="topic">How did you hear that?</label>
-            <select id="topic" name="topic" required>
+            <label for="source">How did you hear that?</label>
+            <select id="source" name="source" required>
                 <option value="">-- Select --</option>
                 <option value="gdsearch">DuckDuckGo/Google/Bing/SearX</option>
                 <option value="reflink">Referred link</option>
@@ -63,6 +63,28 @@
                 <button type="reset">Reset</button>
             </div>
         </form>
+
+        <script>
+            function prepareMailto() {
+                const name = document.getElementById('name').value;
+                const topic = document.getElementById('topic').value;
+                const description = document.getElementById('description').value;
+                const source = document.getElementById('source').value;
+
+                if (!name || !topic || !description || !source) {
+                    alert('Please fill out all required fields.');
+                    return false;
+                }
+
+                const subject = `Contact Form Topic: ${topic}`;
+                const body = `Full Name: ${name}\nDescription: ${description}\nHow did you hear about us: ${source}`;
+
+                const mailtoLink = `mailto:martin.eesmaa@protonmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoLink;
+
+                return false; // Prevent the default form submission
+            }
+        </script>
         <!-- End of Contact Form -->
         <socialmedias>
         <h4>Make sure to follow our social medias</h4>
