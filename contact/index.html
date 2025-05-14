@@ -69,15 +69,17 @@
                 const name = document.getElementById('name').value;
                 const topic = document.getElementById('topic').value;
                 const description = document.getElementById('description').value;
-                const source = document.getElementById('source').value;
 
-                if (!name || !topic || !description || !source) {
+                const sourceSelect = document.getElementById('source');
+                const sourceText = sourceSelect.options[sourceSelect.selectedIndex].text;
+
+                if (!name || !topic || !description || !sourceText) {
                     alert('Please fill out all required fields.');
                     return false;
                 }
 
                 const subject = `Contact Form Topic: ${topic}`;
-                const body = `Full Name: ${name}\nDescription: ${description}\nHow did you hear about us: ${source}`;
+                const body = `Full Name: ${name}\nDescription: ${description}\nHow did you hear about us: ${sourceText}`;
 
                 const mailtoLink = `mailto:martin.eesmaa@protonmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.location.href = mailtoLink;
