@@ -29,8 +29,11 @@
         </p>
         <!-- Contact Form -->
         <form method="GET" action="mailto:martin.eesmaa@protonmail.com" onsubmit="return prepareMailto()">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Full name" required>
+            <label for="name">First Name</label>
+            <input type="text" id="name" name="name" placeholder="First name" required>
+
+            <label for="name">Last Name</label>
+            <input type="text" id="name1" name="name" placeholder="Last name" required>
 
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Email address" required>
@@ -48,15 +51,32 @@
             <textarea id="description" name="description" rows="5" style="resize:none" placeholder="Type your message here..." required></textarea>
 
             <label for="source">How did you hear that?</label>
-            <select id="source" name="source" required>
-                <option value="">-- Select --</option>
-                <option value="gdsearch">DuckDuckGo/Google/Bing/SearX</option>
-                <option value="reflink">Referred link</option>
-                <option value="smedia">Social Media</option>
-                <option value="test">Testing</option>
-                <option value="surf">Surfing</option>
-                <option value="somethinge">Something else</option>
-            </select>
+            <div id="source">
+                <div>
+                    <input type="radio" id="gdsearch" name="source" value="DuckDuckGo/Google/Bing/SearX" required>
+                    <label for="gdsearch">DuckDuckGo/Google/Bing/SearX</label>
+                </div>
+                <div>
+                    <input type="radio" id="reflink" name="source" value="Referred link" required>
+                    <label for="reflink">Referred link</label>
+                </div>
+                <div>
+                    <input type="radio" id="smedia" name="source" value="Social Media" required>
+                    <label for="smedia">Social Media</label>
+                </div>
+                <div>
+                    <input type="radio" id="test" name="source" value="Testing" required>
+                    <label for="test">Testing</label>
+                </div>
+                <div>
+                    <input type="radio" id="surf" name="source" value="Surfing" required>
+                    <label for="surf">Surfing</label>
+                </div>
+                <div>
+                    <input type="radio" id="somethinge" name="source" value="Something else" required>
+                    <label for="somethinge">Something else</label>
+                </div>
+            </div>
 
             <div class="button-group">
                 <button type="submit">Submit</button>
@@ -67,11 +87,13 @@
         <script>
             function prepareMailto() {
                 const name = document.getElementById('name').value;
+                const name1 = document.getElementById('name1').value;
                 const topic = document.getElementById('topic').value;
                 const description = document.getElementById('description').value;
 
-                const sourceSelect = document.getElementById('source');
-                const sourceText = sourceSelect.options[sourceSelect.selectedIndex].text;
+                // Get the selected radio button's value for "How did you hear about us"
+                const source = document.querySelector('input[name="source"]:checked');
+                const sourceText = source ? source.value : '';
 
                 if (!name || !topic || !description || !sourceText) {
                     alert('Please fill out all required fields.');
@@ -79,7 +101,7 @@
                 }
 
                 const subject = `Contact Form Topic: ${topic}`;
-                const body = `Full Name: ${name}\nDescription: ${description}\nHow did you hear about us: ${sourceText}`;
+                const body = `First name: ${name}\nLast name: ${name1}\nDescription: ${description}\nHow did you hear about us: ${sourceText}`;
 
                 const mailtoLink = `mailto:martin.eesmaa@protonmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.location.href = mailtoLink;
