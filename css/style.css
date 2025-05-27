@@ -122,3 +122,31 @@ form .button-group {
     display: flex;
     justify-content: space-between;
 }
+
+/* Add to your style.css */
+.video-thumbnails {
+    display: flex;
+    gap: 40px;         /* space between thumbnails */
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.video-thumbnails a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+.video-thumbnails a div {
+    font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #8B0000;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.video-thumbnails a:hover div {
+    color: #B22222;
+    text-decoration: underline;
+}
