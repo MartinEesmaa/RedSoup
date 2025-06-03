@@ -4,13 +4,11 @@
 h1 {
     font: bold;
     font-family: 'Segoe UI';
-    font-display: auto;
     text-align: center;
 }
 
 p {
     font-family: "Lato", sans-serif;
-    font-display: auto;
     font-weight: 400;
     font-size: larger;
     font-style: normal;
@@ -89,6 +87,7 @@ header nav a:focus {
 
 .text {
     flex: 1;
+    font-size: 1.25em;
 }
 
 .image {
@@ -132,7 +131,6 @@ form .button-group {
     justify-content: space-between;
 }
 
-/* Add to your style.css */
 .video-thumbnails {
     display: flex;
     gap: 40px;         /* space between thumbnails */
@@ -158,4 +156,15 @@ form .button-group {
 .video-thumbnails a:hover div {
     color: #B22222;
     text-decoration: underline;
+}
+
+.print-btn {
+    font-size: 1.1em;
+    margin: 16px 0;
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #b22222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
