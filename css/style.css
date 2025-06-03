@@ -62,14 +62,23 @@ header nav {
 }
 
 header nav a {
-    font-family: "Open Sans", sans-serif;
-    font: bold;
-    color:brown;
-    padding: 15px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: brown;
+    padding: 18px 28px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 4px;
 }
 
-header nav a:hover {
-    color:crimson;
+header nav a:hover,
+header nav a:focus {
+    color: #fff;
+    background: #b22222;
+    outline: none;
 }
 
 .content {
