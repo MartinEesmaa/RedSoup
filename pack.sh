@@ -19,6 +19,7 @@ cp recipe/index.html package/recipe.html
 cp contact/index.html package/contact.html
 cp css/style.css package/css/style.css
 cp -r img package/img
+rm -f package/img/vidicon.svg
 
 cd package
 
