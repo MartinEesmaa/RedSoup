@@ -4,6 +4,8 @@ Red soup restaurant's website (School project)
 
 I'm using [Evolus Pencil](https://pencil.evolus.vn/) to make website designs.
 
+Feedbacks of my teacher are available [there](FEEDBACK.md).
+
 # Preview concepts of three pages
 
 ### Main page
