@@ -19,6 +19,7 @@ cp recipe/index.html package/recipe.html
 cp contact/index.html package/contact.html
 cp css/style.css package/css/style.css
 cp -r img package/img
+cp favicon.ico package/
 rm -f package/img/vidicon.svg
 
 cd package
@@ -36,6 +37,7 @@ for f in *.html; do
     -e 's|video/index.html|video.html|g' \
     -e 's|contact/index.html|contact.html|g' \
     -e 's|css/style.css|css/style.css|g' \
+    -e 's|../favicon.ico|favicon.ico|g' \
     "$f"
 done
 
