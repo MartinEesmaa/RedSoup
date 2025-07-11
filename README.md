@@ -1,4 +1,4 @@
-# RedSoup
+# Red Soup Restaurant (by Martin Eesmaa)
 
 Red soup restaurant's website (School project)
 
