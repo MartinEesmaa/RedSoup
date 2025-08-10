@@ -11,14 +11,13 @@ else
   rm -rf package/*
 fi
 
-mkdir -p package/css
-
 cp *.html package/
 cp video/index.html package/video.html
 cp recipe/index.html package/recipe.html
 cp contact/index.html package/contact.html
-cp css/style.css package/css/style.css
+cp -r css package/css
 cp -r img package/img
+cp -r fonts package/fonts
 cp favicon.ico package/
 rm -f package/img/vidicon.svg
 
